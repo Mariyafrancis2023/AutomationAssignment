@@ -12,9 +12,9 @@ import com.naveenautomationlabs.AutomationFramework.base.TestBase;
 
 public class MyAccountTest extends TestBase {
 
-	YourStore yourStore;
-	AccountLogin login;
-	MyAccount myAccount;
+	private YourStore yourStore;
+	private AccountLogin login;
+	private MyAccount myAccount;
 	
 	@BeforeMethod
 	public void setUp() {
@@ -28,7 +28,7 @@ public class MyAccountTest extends TestBase {
 		login = yourStore.clickLoginLink();
 		myAccount = login.loginToAccount();
 		myAccount.navigativeSideBar("Returns");
-		Assert.assertEquals(wd.getTitle(), "Product Returns");
+		Assert.assertEquals(wd.getTitle(), "Product Returns", "incorrect page");
 	}
 	
 	@AfterMethod

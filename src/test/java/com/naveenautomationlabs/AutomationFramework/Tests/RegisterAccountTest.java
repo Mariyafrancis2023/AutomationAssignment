@@ -11,8 +11,8 @@ import com.naveenautomationlabs.AutomationFramework.base.TestBase;
 
 public class RegisterAccountTest extends TestBase{
 
-	YourStore yourStore;
-	RegisterAccount register;
+	private YourStore yourStore;
+	private RegisterAccount register;
 	
 	@BeforeMethod
 	public void setUp() {
@@ -25,7 +25,7 @@ public class RegisterAccountTest extends TestBase{
 		yourStore.clickMyAccountLink();
 		register = yourStore.clickRegisterLink();
 		register.checkRegistration();
-		Assert.assertEquals(register.getTextMsg(), "E-Mail Address does not appear to be valid!");
+		Assert.assertEquals(register.getTextMsg(), "Warning: E-Mail Address is already registered!", "incorrect message");
 	}
 	
 	@AfterMethod

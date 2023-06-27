@@ -2,14 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="com.naveenautomationlabs.AutomationFrameworkAsgnmt2.Listeners.CustomListener"/>
-		<listener class-name="com.naveenautomationlabs.AutomationFrameworkAsgnmt2.Listeners.TransformerForRetry"/>
-		<listener class-name="com.naveenautomationlabs.AutomationFrameworkAsgnmt2.Listeners.ExtentReportListener"/>
+		<listener class-name="com.naveenautomationlabs.AutomationFramework.Listeners.CustomListener"/>
+		<listener class-name="com.naveenautomationlabs.AutomationFramework.Listeners.TransformerForRetry"/>
+		<listener class-name="com.naveenautomationlabs.AutomationFramework.Listeners.ExtentReportListener"/>
 		
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.naveenautomationlabs.AutomationFramework.Tests.YourOrderHasBeenPlacedTest"/>
+			<class name="com.naveenautomationlabs.AutomationFramework.Tests.MacbookTest"/>
+			<class name="com.naveenautomationlabs.AutomationFramework.Tests.MyAccountTest"/>
+			<class name="com.naveenautomationlabs.AutomationFramework.Tests.ProductComparisonTest"/>
+			<class name="com.naveenautomationlabs.AutomationFramework.Tests.RegisterAccountTest"/>
+			<class name="com.naveenautomationlabs.AutomationFramework.Tests.YourStoreTest"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
+

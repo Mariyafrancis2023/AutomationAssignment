@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="setUpLogger"/>
-          <include name="validateAddToCart"/>
+          <include name="validateAddToWishList"/>
           <include name="quit"/>
         </methods>
       </class> <!-- com.naveenautomationlabs.AutomationFramework.Tests.YourStoreTest -->

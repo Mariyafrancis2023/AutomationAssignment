@@ -17,16 +17,16 @@ public class YourStore extends TestBase {
 	}
 
 	@FindBy(css = "input[name='search']")
-	WebElement searchInput;
+	private WebElement searchInput;
 
 	@FindBy(css = "span button[type='button']")
-	WebElement searchButton;
+	private WebElement searchButton;
 	
 	@FindBy(xpath = "(//button[@data-original-title='Add to Wish List'])[1]")
-	WebElement wishListBtn;
+	private WebElement wishListBtn;
 	
-	@FindBy(css = "#wishlist-total")
-	WebElement wishListText;
+	@FindBy(xpath = "//a[@id='wishlist-total']//span")
+	private WebElement wishListNumber;
 	
 
 	public void searchInput(String productName) {
@@ -47,13 +47,14 @@ public class YourStore extends TestBase {
 	}
 	
 	public YourStore clickWishListBtn() {
-		wait.until(ExpectedConditions.elementToBeClickable(wishListBtn));
+		wait.until(ExpectedConditions.visibilityOf(wishListBtn));
 		wishListBtn.click();
 		return new YourStore();
 	}
 	
-	public String getWishListText() {
-		return wishListText.getText();
+	public String getWishListNumber() {
+		wait.until(ExpectedConditions.visibilityOf(wishListNumber));
+		return wishListNumber.getText();
 	}
 
 	@FindBy(xpath = "//span[text()='My Account']")
@@ -93,10 +94,10 @@ public class YourStore extends TestBase {
 	}
 	
 	@FindBy (xpath = "(//button[@data-original-title = \"Compare this Product\"])[2]")
-	WebElement compareProductBtn;
+	private WebElement compareProductBtn;
 	
 	@FindBy (xpath = "//a[text() = 'product comparison']")
-	WebElement compareProductLink;
+	private WebElement compareProductLink;
 	
 	public void clickCompareProductBtn() {
 		wait.until(ExpectedConditions.elementToBeClickable(compareProductBtn));
@@ -109,13 +110,13 @@ public class YourStore extends TestBase {
 		return new ProductComparison();
 	}
 	@FindBy(xpath = "//button[@onclick=\"cart.add('43');\"]")
-	WebElement addToCartBtn;
+	private WebElement addToCartBtn;
 	
 	@FindBy(xpath = "//span[@id='cart-total']")
-	WebElement cartBtn;
+	private WebElement cartBtn;
 	
 	@FindBy(xpath = "//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]")
-	WebElement viewCartBtn;
+	private WebElement viewCartBtn;
 	
 	public void clickAddToCartBtn() {
 		wait.until(ExpectedConditions.visibilityOf(addToCartBtn));
@@ -133,10 +134,10 @@ public class YourStore extends TestBase {
 	}
 	
 	@FindBy(xpath = "//div[contains(@class, 'swiper-container')]")
-	WebElement slider;
+	private WebElement slider;
 	
 	@FindBy(xpath = "//div[contains(@class, 'swiper-container')]/div[contains(@class, 'swiper-wrapper')]/div[contains(@class, 'swiper-slide')]")
-	List<WebElement> sliderList;
+	private List<WebElement> sliderList;
 	
 	public void sliderSelection() {
 		Actions actions = new Actions(wd);

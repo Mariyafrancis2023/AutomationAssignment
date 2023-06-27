@@ -13,10 +13,10 @@ public class Macbook extends TestBase {
 	}
 
 	@FindBy(xpath = "//button[@id = 'button-cart']")
-	WebElement addToCartButton;
+	private WebElement addToCartButton;
 
 	@FindBy(css = "#product-product > div.alert.alert-success.alert-dismissible")
-	WebElement successBanner;
+	private WebElement successBanner;
 
 	public Macbook clickaddToCartButton() {
 		wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));

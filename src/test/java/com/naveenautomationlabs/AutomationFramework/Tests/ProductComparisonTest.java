@@ -11,8 +11,8 @@ import com.naveenautomationlabs.AutomationFramework.base.TestBase;
 
 public class ProductComparisonTest extends TestBase {
 
-	YourStore yourStore;
-	ProductComparison compare;
+	private YourStore yourStore;
+	private ProductComparison compare;
 	
 	@BeforeMethod
 	public void setUp() {
@@ -24,7 +24,7 @@ public class ProductComparisonTest extends TestBase {
 	public void validateProductComparison() {
 		yourStore.clickCompareProductBtn();
 		compare = yourStore.clickCompareProductLink();
-		Assert.assertEquals(compare.getPageHeading(), "Product Comparison");
+		Assert.assertEquals(compare.getPageHeading(), "Product Comparison", "incorrect text");
 	}
 	
 	@AfterMethod

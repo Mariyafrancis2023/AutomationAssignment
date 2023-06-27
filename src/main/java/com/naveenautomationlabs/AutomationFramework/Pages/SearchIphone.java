@@ -13,7 +13,7 @@ public class SearchIphone extends TestBase {
 	}
 
 	@FindBy(css = "#content > div:nth-child(8) > div > div > div:nth-child(2) > div.caption > h4 > a")
-	WebElement productLink;
+	private WebElement productLink;
 
 	public Iphone clickProductLink() {
 		productLink.click();

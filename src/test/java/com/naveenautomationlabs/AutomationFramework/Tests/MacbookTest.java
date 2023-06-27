@@ -11,8 +11,8 @@ import com.naveenautomationlabs.AutomationFramework.base.TestBase;
 
 public class MacbookTest extends TestBase {
 
-	YourStore yourStore;
-	Macbook mac;
+	private YourStore yourStore;
+	private Macbook mac;
 	
 	@BeforeMethod
 	public void setUp() {
@@ -23,7 +23,7 @@ public class MacbookTest extends TestBase {
 	@Test
 	public void validateProductsMenu() {
 		yourStore.navigateProducts("MacBook");
-		Assert.assertEquals(wd.getTitle(), "MacBook");
+		Assert.assertEquals(wd.getTitle(), "MacBook", "incorrect page");
 	}
 	
 	@AfterMethod

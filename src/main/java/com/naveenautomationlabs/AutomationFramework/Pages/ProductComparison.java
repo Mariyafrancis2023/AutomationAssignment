@@ -13,7 +13,7 @@ public class ProductComparison extends TestBase{
 	}
 	
 	@FindBy(css = "#content h1")
-	WebElement pageHeading;
+	private WebElement pageHeading;
 	
 	public String getPageHeading() {
 		return pageHeading.getText();

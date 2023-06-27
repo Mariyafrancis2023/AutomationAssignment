@@ -37,7 +37,7 @@ public class RegisterAccount extends TestBase  {
 	@FindBy(css = "input[value='Continue']")
 	private WebElement continueButton;
 	
-	@FindBy(xpath = "//div[@class='text-danger']")
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
 	private WebElement getMessageText;
 	
 	
@@ -82,7 +82,7 @@ public class RegisterAccount extends TestBase  {
 		continueButton.click();
 		return new RegisterAccount();
 	}
-	
+
 	public RegisterAccount checkRegistration() {
 		enterFirstName();
 		enterLastName();

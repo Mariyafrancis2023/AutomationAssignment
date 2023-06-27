@@ -14,9 +14,7 @@ public class MyAccount extends TestBase {
 	public MyAccount() {
 		PageFactory.initElements(wd, this);
 	}
-	
-	String pageTittle;
-	
+		
 	@FindBy(xpath = "//div[@class='list-group']//a")
 	List<WebElement> sideNavigationBarElements;
 	

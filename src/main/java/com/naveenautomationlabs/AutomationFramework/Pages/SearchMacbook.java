@@ -13,7 +13,7 @@ public class SearchMacbook extends TestBase {
 	}
 
 	@FindBy(xpath = "//a[text()='MacBook']")
-	WebElement productLink;
+	private WebElement productLink;
 
 	public Macbook clickProductLink() {
 		productLink.click();
